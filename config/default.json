@@ -1,0 +1,16 @@
+{
+  "Database": {
+    "user": "postgres",
+    "host": "127.0.0.1",
+    "database": "meteorological-data_db",
+    "password": "datavaleriia",
+    "port": 5432
+  },
+  "Path": {
+    "project": "/Users/valeriia.postoronka/add_data_DB/",
+    "images" : "/Users/valeriia.postoronka/add_data_DB/public/images/",
+    "frontjs" : "/Users/valeriia.postoronka/add_data_DB/public/js/",
+    "controllers" : "/Users/valeriia.postoronka/add_data_DB/controllers/",
+    "utils" : "/Users/valeriia.postoronka/add_data_DB/utils/"
+  }
+}

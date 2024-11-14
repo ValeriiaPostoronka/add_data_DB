@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Головна сторінка</title>
+    <%- include('../partials/head'); %>
+  </head>
+  <body>
+    <%- include('../partials/test_modal'); %>
+    <%- include('../partials/normalization_modal'); %>
+    <%- include('../partials/corellation_modal'); %>
+    <%- include('../partials/registration'); %>
+    <%- include('../partials/header'); %>
+    <div class="wrapper">
+      <main>
+        <%- include('../partials/description'); %>
+        <%- include('../partials/test_block'); %>
+        <%- include('../partials/normalization_block'); %>
+        <%- include('../partials/corellation_block'); %>
+      </main>
+      <%- include('../partials/footer'); %>
+      <script src="/assets/js/modals.js"></script>
+  </body>
+</html>

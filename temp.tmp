@@ -1,0 +1,136 @@
+.
+├── app.js - Основний файл серверної програми - вхідний файл, по типу як main в c++. З цього файлу починається вся логіка розробників
+├── bin - Папка виконавчих файлів
+│   ├── README.md
+│   └── www - Файл-вхідна точка програми, викликає app.js під капотом. Окрім того, що слугує вхідною точкою, містить в собі всілякі адміністраторські налаштування стосовно розгортання застосунку
+├── config - папка конфігурацій
+│   ├── README.md
+│   └── default.json - Конфігураційний файл, який містить поширені та часто використовувані константи по проєкту
+├── controllers - Папка основних файлів бізнес процесів. Тут по суті виокремлені функції, які описують лише основний, логічний функціонал, який намагається якомога більше абстрагуватись від клієнт-серверної логіки
+│   ├── README.md
+│   ├── checkdata-shapiroTest-command.js - Скрипт-команда для тестування вибірки даних на нормальний розподіл за методом Шапіро-Вілка
+│   ├── checkdata-shapiroTest.js - Функція тестування вибірки даних на нормальний розподіл за методом Шапіро-Вілка. Повертає значення W (результат тесту), значення p (визначає чи підтверджується нульова гіпотеза про нормальний розподіл) та власне саму перевірку на нормальність isNormal
+│   ├── data-corellation-command.js - Скрипт-команда для перевірки кореляції нормованих даних між двома вибірками, а також перевірка кореляції для швидкості зміни цих даних
+│   ├── data-corellation.js - Функція для перевірки кореляції нормованих даних між двома вибірками, а також перевірка кореляції для швидкості зміни цих даних. Повертає тег графіку кореляції звичайних даних та швидкості їх зміни, а також коефцієнти кореляції Пірсона для цих двох графіків
+│   ├── data-normalization-vizual-command.js - Скрипт-команда нормалізації певної вибірки даних у масштабах від 0 до 1 (за замовчуванням)
+│   └── data-normalization-vizual.js - Функція нормалізації певної вибірки даних у масштабах від 0 до 1 (за замовчуванням). Повертає svg тег нормованого графіку для обраної величини
+├── data - Папка даних з дослідної станції
+│   ├── 01_02_2021.log
+│   ├── ...
+│   └── 31_01_2021.log
+├── middleware - папка для "плагінів" express.js. Насправді, навряд буде використовуватись
+│   └── README.md
+├── models - папка для представлення моделей роботи з БД. Насправді, навряд буде використовуватись
+│   └── README.md
+├── package-lock.json
+├── package.json - файл конфігурації npm. Тут налаштовані команди для розгортання та розробки застосунку
+├── public - папка, що містить відкриті для користувачів файли. Вони можуть їх отримати за посиланням localhost:3000:/assets/шлях_до_файлу
+│   ├── README.md
+│   ├── css - папка зі скомпільованими css стилями
+│   │   ├── base.css
+│   │   ├── base.css.map
+│   │   ├── corelation_block.css
+│   │   ├── corelation_block.css.map
+│   │   ├── corelation_modal.css
+│   │   ├── corelation_modal.css.map
+│   │   ├── corelation_result.css
+│   │   ├── corelation_result.css.map
+│   │   ├── corellation_block.css.map
+│   │   ├── corellation_modal.css.map
+│   │   ├── description.css
+│   │   ├── description.css.map
+│   │   ├── footer.css
+│   │   ├── footer.css.map
+│   │   ├── header.css
+│   │   ├── header.css.map
+│   │   ├── index.css
+│   │   ├── index.css.map
+│   │   ├── main.css.map
+│   │   ├── modal.css
+│   │   ├── modal.css.map
+│   │   ├── normalization_block.css
+│   │   ├── normalization_block.css.map
+│   │   ├── normalization_modal.css
+│   │   ├── normalization_modal.css.map
+│   │   ├── normalization_result.css
+│   │   ├── normalization_result.css.map
+│   │   ├── registration.css
+│   │   ├── registration.css.map
+│   │   ├── result.css
+│   │   ├── result.css.map
+│   │   ├── test_block.css
+│   │   ├── test_block.css.map
+│   │   ├── test_modal.css
+│   │   ├── test_modal.css.map
+│   │   ├── test_result.css
+│   │   └── test_result.css.map
+│   ├── fonts - Використовувані шрифти
+│   │   ├── Rubik-Italic-VariableFont_wght.ttf
+│   │   └── Rubik-VariableFont_wght.ttf
+│   ├── images - Згенеровані картинки
+│   │   ├── chart.svg
+│   │   ├── corellation.svg
+│   │   ├── simpleChart.svg
+│   │   └── speed.svg
+│   └── js - файл js, який виконується на клієнтській частині (front)
+│       └── modals.js
+├── routes - папка, в якій кожен файл визначає окремий шлях до ресурсів серверу, щоб взаємодіяти з ним. Тобто, описує, що робить сервер, коли до нього звертаються на одну з відомих йому шляхів, наприклад localhost:3000/, localhost:3000/results, localhost:3000/corelation_api, тощо
+│   ├── README.md
+│   ├── corelation_api.js - Визначення шляху для отримання за api результату кореляції
+│   ├── index.js - Визначення головного шляху на головну сторінку
+│   ├── normalization_api.js - Визначення шляху для отримання за api результату нормування
+│   ├── result.js - Визначення шляху обробки результатів на запити до серверу
+│   └── test_api.js - Визначення шляху для отримання за api результату перевірки нормалізації даних
+├── scss - Папка з усіма scss файлами. Компільовані елементи зберігаються в public/css
+│   ├── base.scss
+│   ├── corelation_block.scss
+│   ├── corelation_modal.scss
+│   ├── corelation_result.scss
+│   ├── description.scss
+│   ├── footer.scss
+│   ├── header.scss
+│   ├── index.scss
+│   ├── modal.scss
+│   ├── normalization_block.scss
+│   ├── normalization_modal.scss
+│   ├── normalization_result.scss
+│   ├── registration.scss
+│   ├── result.scss
+│   ├── test_block.scss
+│   ├── test_modal.scss
+│   └── test_result.scss
+├── tests - папка тестів для проєкту. Не буде використовуватись
+│   └── README.md
+├── utils
+│   ├── README.md
+│   ├── database.js
+│   ├── get-pvgis.js
+│   ├── load-csv-data-new.js
+│   ├── load-csv-data.js
+│   ├── mathTools.js
+│   └── plots.js
+└── views - папка всіляких елементів представлення html даних
+    ├── README.md
+    ├── pages - папка сторінок
+    │   ├── error.ejs - сторінка обробки помилок на сервері
+    │   ├── index.ejs - головна сторінка
+    │   └── result.ejs - сторінка результатів
+    └── partials - папка використовуваних блоків
+        ├── corelation_result.ejs
+        ├── corellation_block.ejs
+        ├── corellation_modal.ejs
+        ├── description.ejs
+        ├── footer.ejs
+        ├── head.ejs
+        ├── head_result.ejs
+        ├── header.ejs
+        ├── normalization_block.ejs
+        ├── normalization_modal.ejs
+        ├── normalization_result.ejs
+        ├── registration.ejs
+        ├── result.ejs
+        ├── test_block.ejs
+        ├── test_modal.ejs
+        └── test_result.ejs
+
+19 directories, 180 files

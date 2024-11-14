@@ -1,0 +1,47 @@
+#modal-registration .modal__container .modal__wrapper .modal__content .alert, #modal-login .modal__container .modal__wrapper .modal__content .alert {
+  font-family: var(--family);
+  color: red;
+}
+#modal-registration .modal__container .modal__wrapper .modal__content .hidden, #modal-login .modal__container .modal__wrapper .modal__content .hidden {
+  display: none;
+}
+#modal-registration .modal__container .modal__wrapper .modal__content .form__element, #modal-login .modal__container .modal__wrapper .modal__content .form__element {
+  margin: var(--sp-l) 0 var(--sp-l) 0;
+  width: 100%;
+}
+#modal-registration .modal__container .modal__wrapper .modal__content .form__element label, #modal-login .modal__container .modal__wrapper .modal__content .form__element label {
+  font-family: var(--family);
+  font-size: var(--fs-l);
+  color: var(--c-05);
+}
+#modal-registration .modal__container .modal__wrapper .modal__content .form__element input, #modal-login .modal__container .modal__wrapper .modal__content .form__element input {
+  border: 2px solid var(--c-04);
+  border-radius: var(--br-m);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.16), 0 2px 4px 1px rgba(0, 0, 0, 0.08);
+  font-family: var(--family);
+  font-size: var(--fs-m);
+  font-weight: 100;
+  font-style: italic;
+  margin-top: var(--sp-xs);
+  padding: var(--sp-m) var(--sp-l);
+  width: -webkit-fill-available;
+  width: -moz-available;
+}
+#modal-registration .modal__container .modal__wrapper .modal__content .form__element textarea, #modal-login .modal__container .modal__wrapper .modal__content .form__element textarea {
+  font-family: var(--family);
+  font-size: var(--fs-m);
+  font-weight: 100;
+  font-style: italic;
+  padding: var(--sp-m) var(--sp-l);
+  resize: none;
+  border: 2px solid var(--c-04);
+  border-radius: var(--br-m);
+  box-shadow: var(--shadow);
+  width: -webkit-fill-available;
+  width: -moz-available;
+}
+#modal-registration .modal__container .modal__wrapper .modal__content .section__actions, #modal-login .modal__container .modal__wrapper .modal__content .section__actions {
+  margin-bottom: unset;
+}
+
+/*# sourceMappingURL=registration.css.map */

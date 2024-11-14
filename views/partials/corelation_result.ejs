@@ -1,0 +1,32 @@
+<div>
+  Коефіцієнт кореляції Пірсона звичайних нормованих даних:<%= result.pearsonCoef %>
+</div>
+<div>
+  Коефіцієнт кореляції Пірсона швидкості зміни даних:<%= result.speedPearsonCoef %>
+</div>
+<div>
+  <%- result.plot %>
+</div>
+<div>
+  <%- result.speedPlot %>
+</div>
+<div>
+  Пояснення до першої картинки
+  <ul>
+    <li>Вісь абсцис - часовий проміжок</li>
+    <li>Вісь оридинат - нормовані дані</li>
+  </ul>
+</div>
+<div>
+  Пояснення до другої картинки
+  <ul>
+    <li>Вісь абсцис - часовий проміжок</li>
+    <li>Вісь оридинат - нормовані дані</li>
+  </ul>
+</div>
+<div>
+  Синій графік - <%= getParams.baseTable %>/<%= getParams.baseColumn %>
+</div>
+<div>
+  Помаранчевий графік - <%= getParams.corelationTable %>/<%= getParams.corelationColumn %>
+</div>

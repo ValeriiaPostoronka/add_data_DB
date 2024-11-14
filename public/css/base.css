@@ -1,0 +1,57 @@
+/**
+ * Custom CSS properties.
+ */
+/* Include text font */
+@font-face {
+  font-family: "Rubik";
+  src: url("/assets/fonts/Rubik-VariableFont_wght.ttf") format("truetype");
+}
+:root {
+  /* Text font */
+  --family: "Rubik";
+  /* Shadow */
+  --shadow: 0 0 1px rgba(0, 0, 0, 0.16), 0 2px 4px 1px rgba(0, 0, 0, 0.08);
+  /* Wrappers */
+  --container: 1176px;
+  --wrapper: 744px;
+  --sp-section: 56px;
+  /* Font size */
+  --fs-base: 16px;
+  --fs-xs: calc(var(--fs-base) * 0.75);
+  --fs-s: calc(var(--fs-base) * 0.875);
+  --fs-m: var(--fs-base);
+  --fs-l: calc(var(--fs-base) * 1.125);
+  --fs-xl: calc(var(--fs-base) * 1.25);
+  /* Spaces */
+  --sp: 16px;
+  --sp-xs: calc(var(--sp) * 0.25);
+  --sp-s: calc(var(--sp) * 0.5);
+  --sp-m: calc(var(--sp) * 0.75);
+  --sp-l: var(--sp);
+  --sp-xl: calc(var(--sp) * 1.5);
+  --sp-xxl: calc(var(--sp) * 2);
+  /* Gaps */
+  --gap-base: 16px;
+  --gap-xs: calc(var(--gap-base) / 2);
+  --gap-m: var(--gap-base);
+  --gap-xl: calc(var(--gap-base) * 2);
+  /* Radius */
+  --br-base: 4px;
+  --br-xs: calc(var(--br-base) / 2);
+  --br-s: var(--br-base);
+  --br-m: calc(var(--br-base) * 2);
+  --br-l: calc(var(--br-base) * 4);
+  --br-xl: calc(var(--br-base) * 6);
+  /* Colors */
+  --c-white: #FFF;
+  --c-black: #000;
+  --c-green: #7DA38C;
+  --c-red: #B51D46;
+  --c-01: #444152;
+  --c-02: #8e8aa5;
+  --c-03: #e4e4e6;
+  --c-04: #cbcad0;
+  --c-05: #241e3e;
+}
+
+/*# sourceMappingURL=base.css.map */

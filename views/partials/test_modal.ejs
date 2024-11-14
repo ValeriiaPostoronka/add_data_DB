@@ -1,0 +1,49 @@
+<div class="modal" id="modal-test" aria-hidden="true">
+  <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+    <div class="modal__container" role="dialog" aria-modal="true">
+      <div class="modal__wrapper">
+        <header class="modal__header">
+          <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+        </header>
+        <form id="test-form" class="form" aria-label="Test form" method="get" action="/result">
+          <input type="hidden" name="formId" value="test">
+          <div class="form__element">
+            <label>Джерело даних</label>
+            <br>
+            <select name="table">
+              <option value="pvgis_api">pvgis_api</option>
+              <option value="station_data">station_data</option>
+            </select>
+          </div>
+          <div class="form__element">
+            <label>Стовпчик</label>
+            <br>
+            <select name="column">
+              <option value="Irradiance">Irradiance</option>
+              <option value="Power">Power</option>
+              <option value="Temperature">Temperature</option>
+              <option value="Humidity">Humidity</option>
+              <option value="Pressure">Pressure</option>
+            </select>
+          </div>
+
+          <div class="form__element">
+            <label>Дата дня</label>
+            <br>
+            <input type="date" placeholder="Дата дня" name="day" value="2020-11-23" min="2020-01-01" max="2021-12-31">
+          </div>
+          <div class="form__element">
+            <label>Допустима похибка</label>
+            <br>
+            <input type="number" placeholder="Похибка" name="alpha" step="0.01" min="0" max="1">
+          </div>
+          <div class="form__element section__actions">
+            <div class="section__actions">
+              <a href="#submit-modal-test" class="button">Розпочати тест</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

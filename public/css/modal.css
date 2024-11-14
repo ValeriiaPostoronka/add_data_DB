@@ -1,0 +1,51 @@
+.modal {
+  display: none;
+}
+
+.modal.is-open {
+  display: block;
+}
+
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 15;
+}
+
+.modal__container {
+  background: var(--c-03);
+  border-radius: var(--br-m);
+  border: 2px solid var(--c-04);
+  max-height: none;
+  max-width: 300px;
+  width: 300px;
+  padding: 48px 64px;
+  position: absolute;
+}
+@media (max-width: 576px) {
+  .modal__container {
+    padding: 48px var(--sp-l);
+  }
+}
+.modal__container .modal__wrapper .modal__header .modal__close {
+  filter: invert(26%) sepia(34%) saturate(713%) hue-rotate(165deg) brightness(95%) contrast(88%);
+  border: unset;
+  position: absolute;
+  width: 25px;
+  height: 24px;
+  top: var(--sp-xl);
+  right: var(--sp-xl);
+  cursor: pointer;
+  background: url("data:image/svg+xml,%3C%3Fxml version='1.0' %3F%3E%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;stroke:%23000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;%7D%3C/style%3E%3C/defs%3E%3Ctitle/%3E%3Cg id='cross'%3E%3Cline class='cls-1' x1='7' x2='25' y1='7' y2='25'/%3E%3Cline class='cls-1' x1='7' x2='25' y1='25' y2='7'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/*# sourceMappingURL=modal.css.map */

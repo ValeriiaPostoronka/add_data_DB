@@ -1,0 +1,105 @@
+.wrapper .fa-2xl {
+    line-height: unset;
+    vertical-align: unset;
+}
+        
+.header {
+    display: grid;
+    grid-area: header;
+    padding: var(--sp-l);
+    grid-template: 1fr / 1fr minmax(auto, 300px) minmax(auto, 1100px) 1fr;
+    align-items: center;
+    background-color: var(--c-04);
+
+    @media (max-width: 769px) {
+        grid-template: 1fr / 1fr minmax(auto, 50px) minmax(auto, 1100px) 1fr;
+    }
+
+
+    &__task {
+        color: var(--c-white);
+        font-size: var(--fs-l);
+        grid-column: 3 / 4;
+        font-family: var(--family);
+    }
+
+    &__index {
+        color: var(--c-white);
+        font-size: var(--fs-l);
+        grid-column: 3 / 4;
+        font-family: var(--family);
+        font-style: italic;
+        font-weight: 200;
+        margin-right: var(--sp-s);
+    }
+
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap-xs);
+    }
+    
+    &__logo {
+        width: max-content;
+        height: max-content;
+        border-radius: 50%;
+        background-color: var(--c-02);
+        grid-column: 2 / 3;
+
+        .fa-beat-fade {
+            color: var(--c-05);
+            animation-name: none;
+
+            &:hover {
+                animation-name: fa-beat-fade;
+            }
+        }
+    }
+    
+    &__page {
+        display: flex;
+        font-family: var(--family);
+
+        @media (max-width: 769px) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        a {
+            color: var(--c-01);
+            text-align: center;
+            padding: var(--sp-m);
+            text-decoration: none;
+            font-size: var(--fs-l);
+            line-height: 25px;
+            border-radius: var(--br-s);
+            font-weight: 700;
+
+            @media (max-width: 992px) {
+                width: max-content;
+                padding: var(--sp-s);
+                font-size: var(--sp-m);
+            }
+
+            &:hover {
+                background-color: var(--c-02);
+                color: var(--c-05);
+            }
+
+            &.active {
+                background-color: var(--c-05);
+                color: var(--c-02);
+            }
+        }
+    }
+
+    .section__actions {
+        margin-bottom: unset;
+
+        .button {
+            padding: var(--sp-xs) var(--sp-xl);
+            border: 2px solid var(--c-03);
+            color: var(--c-03);
+        }
+    }
+}
