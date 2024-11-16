@@ -59,8 +59,6 @@ if (submitNormalization !== null) {
   }
 }
 
-
-
 const registrationButton = [...document.querySelectorAll("a[href='#open-modal-reg']")];
 
 registrationButton.forEach((element) => {
@@ -72,4 +70,50 @@ registrationButton.forEach((element) => {
     }
 });
 
+///
 
+// test select
+// normalization select
+let tableElements = Array.from(document.getElementsByName("table"));
+const baseTableElements = Array.from(document.getElementsByName("baseTable"));
+const corelationTableElements = Array.from(document.getElementsByName("corelationTable"));
+tableElements = tableElements.concat(baseTableElements).concat(corelationTableElements);
+let columnElements = Array.from(document.getElementsByName("column"));
+const baseColumnElements = Array.from(document.getElementsByName("baseColumn"));
+const corelationColumnElements = Array.from(document.getElementsByName("corelationColumn"));
+columnElements = columnElements.concat(baseColumnElements).concat(corelationColumnElements);
+
+// Початкові значення параметрів
+const allOptions = [
+  { value: 'Irradiance', text: 'Irradiance' },
+  { value: 'Power', text: 'Power' },
+  { value: 'Humidity', text: 'Humidity' },
+  { value: 'Pressure', text: 'Pressure' },
+  { value: 'Temperature', text: 'Temperature' },
+];
+
+// Відфільтровані значення для PVGIS API
+const pvgisOptions = ['Irradiance', 'Power', 'Temperature'];
+
+const updateParameters = (source, options) => {
+  const selectedSource = source.value;
+  console.log('smth');
+  options.innerHTML = '';
+
+  const optionsToShow =
+    selectedSource === 'pvgis_api'
+      ? allOptions.filter(option => pvgisOptions.includes(option.value))
+      : allOptions;
+
+  optionsToShow.forEach(option => {
+    const newOption = document.createElement('option');
+    newOption.value = option.value;
+    newOption.textContent = option.text;
+    options.appendChild(newOption);
+  });
+}
+
+tableElements.forEach((tag, index) => {
+  updateParameters(tag, columnElements[index])
+  tag.addEventListener('change', () => updateParameters(tag, columnElements[index]))
+});

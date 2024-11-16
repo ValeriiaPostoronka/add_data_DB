@@ -7,6 +7,7 @@ const logger = require("morgan");
 const indexRouter = require("./routes/index");
 const resultRouter = require("./routes/result");
 const corelationapiRouter = require("./routes/corelation_api");
+const viewRouter = require("./routes/view");
 
 const app = express();
 app.set('view engine', 'ejs');
@@ -23,6 +24,7 @@ app.use('/assets', express.static("public"));
 app.use("/", indexRouter);
 app.use("/result", resultRouter);
 app.use("/api_corelation", corelationapiRouter);
+app.use("/view", viewRouter);
 
 // Error handling
 app.use((req, res, next) => {

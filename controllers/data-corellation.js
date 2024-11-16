@@ -35,7 +35,8 @@ const calculateCorelation = async (bTable, bColumn, cTable, cColumn, sDate, eDat
 
   //await db.endConnection();
 
-  return { pearsonCoef,
+  return { 
+    pearsonCoef,
     speedPearsonCoef,
     baseData,
     corellationData,

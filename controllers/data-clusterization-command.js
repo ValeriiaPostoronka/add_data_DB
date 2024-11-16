@@ -12,6 +12,13 @@ const tools = require(`${utils}mathTools.js`);
   const endDate = process.argv[4];
 
   const dbData = await db.getClusteringData(table, startDate, endDate);
+  console.log(dbData);
+  const normalizedDBData = db.normalizeClusteringData(dbData, table);
+  console.log(normalizedDBData);
+  const valueChanges = tools.getClusteringChanges(normalizedDBData, table);
+  console.log(valueChanges);
+  //const hourlyClusteringInput = await db.formClusteringArray(dbData, table);
+  //console.log(JSON.stringify(hourlyClusteringInput));
 
-  db.endConnection();
+  //db.endConnection();
 })();

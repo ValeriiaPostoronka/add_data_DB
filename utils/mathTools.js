@@ -38,24 +38,71 @@ const getDeltas = (array) => { // У вхідні дані подавати об
   return deltas;
 }
 
-const getCorner = (object1, object2) => {
-  const x1 = object1.x.getTime();
-  const x2 = object2.x.getTime();
-  const y1 = object1.y;
-  const y2 = object2.y;
-
-  const deltaX = x2 - x1;
+const getCorner = (x1, x2, y1, y2) => {
   const deltaY = y2 - y1;
+  const deltaX = x2 - x1;
+  const angleInRadians = Math.atan2(deltaY, deltaX);
 
-  const angleInRadiance = Math.atan2(deltaY, deltaX);
-  const angleInDegrees = angleInRadiance * (180 / Math.PI);
+  const angleInDegrees = angleInRadians * (180 / Math.PI);
 
   return angleInDegrees;
+}
+  //  const d3 = await import('d3');
+//  const extentForDate = d3.extent(data, d => new Date(`${d["Day"].toISOString().split('T')[0]}T${d["Time"]}.000Z`));
+//  const extentForValue = d3.extent(data, d => d[fieldNameY]);
+//  const xScale = d3.scaleUtc().domain(extentForDate).range([0, plotWidthWithoutMargin]).nice();
+//  const yScale = d3.scaleLinear().domain(extentForValue).range([plotHeightWithoutMargin, 0]).nice();
+//  //console.log(extentForValue);
+//
+//  const point1 = { x: xScale(x1), y: yScale(y1) };
+//  const point2 = { x: xScale(x2), y: yScale(y2) };
+//
+//  const deltaX = point2.x - point1.x;
+//  const deltaY = point2.y - point1.y;
+//  console.log(x1);
+//  console.log(point1.x);
+//
+//  const angleInRadiance = Math.atan2(deltaY, deltaX);
+//  const angleInDegrees = angleInRadiance * (180 / Math.PI);
+//  //console.log(angleInDegrees);
+//
+//  return angleInDegrees;
+
+const formClusteringChange = (data, item, index, fieldArray) => {
+  const result = fieldArray.reduce((obj, field) => {
+    obj[field] = item[field] - data.rows[index - 1][field];
+    return obj;
+  }, {});
+
+  return result;
+}
+
+const getClusteringChanges = (data, table) => {
+  const result = [];
+
+  if (table === 'station_data') {
+    data.rows.forEach((item, index) => {
+      if (index === 0) return;
+      result.push(
+        formClusteringChange(data, item, index, ["Irradiance", "Humidity", "Pressure", "Temperature"])
+      );
+    });
+  } else {
+    data.rows.forEach((item, index) => {
+      if (index === 0) return;
+      result.push(
+        formClusteringChange(data, item, index, ["Irradiance",  "Temperature"])
+      );
+    });
+  }
+
+  return result;
 }
 
 module.exports = {
   elementNormalization,
   getDeltas,
   pearsonCorelation,
-  getCorner
+  getCorner,
+  getClusteringChanges,
 }

@@ -9,9 +9,10 @@ const utils = config.get('Path.utils');
 const plots = require(`${utils}plots.js`);
 const db = require(`${utils}database.js`);
 
-db.startConnection();
 
 (async () => {
+  db.startConnection();
+
   const table = process.argv[2];
   const chosenColumn = process.argv[3];
   const startDate = process.argv[4];
@@ -28,6 +29,7 @@ db.startConnection();
   const normPlot = new plots.linearPlot(normalizeCheckData);
   await normPlot.init(500, 500);
   normPlot.writePlotFile();
+  console.log('end');
 
   db.endConnection();
 })();
