@@ -1,0 +1,94 @@
+.section.section-cards {
+    margin-top: var(--sp-section);
+    margin-bottom: var(--sp-section);
+
+    .container {
+        max-width: var(--container);
+        padding: 0 var(--sp-xl) 0 var(--sp-xl);
+        margin: auto;
+        
+        .section__inner {
+    
+            .items {
+                padding: unset;
+                display: grid;
+                grid-auto-rows: 1fr;
+                grid-template-columns: repeat(3, 1fr);
+                column-gap: var(--gap-m);
+                margin: auto;
+    
+                @media (max-width: 992px) {
+                    column-gap: var(--gap-xs);
+                }
+    
+                @media (max-width: 719px) {
+                    grid-template-columns: 1fr;
+                    row-gap: var(--gap-xs);
+                    width: max-content;
+                }
+    
+                @media (max-width: 360px) {
+                    width: 100%;
+                }
+            }
+    
+            .item {
+                list-style: none;
+                background: var(--c-03);
+                border-radius: var(--br-m);
+                padding: 72px var(--sp-xxl) var(--sp-xxl) var(--sp-xxl);
+                text-align: center;
+    
+                @media (max-width: 992px) {
+                    padding: 48px var(--sp-s) var(--sp-xxl) var(--sp-s);
+                }
+    
+                @media (max-width: 719px) {
+                    padding: 36px var(--sp-l) var(--sp-m) var(--sp-l);
+                    max-width: 328px;
+                }
+    
+                .item__number {
+                    font-size: 48px;
+                    margin-bottom: var(--sp4);
+                    font-weight: 400;
+                    font-family: var(--family);
+    
+                    @media (max-width: 992px) {
+                        margin-bottom: 36px;
+                    }
+    
+                    @media (max-width: 719px) {
+                        font-size: 34px;
+                    }
+
+                    .fa-solid{
+                        color: var(--c-05);
+                    }
+                }
+    
+                .item__name {
+                    font-size: 32px;
+                    font-weight: 400;
+                    font-family: var(--family);
+                    line-height: 48px;
+                    
+                    @media (max-width: 992px) {
+                        font-size: 24px;
+                        line-height: 32px;
+                    }
+    
+                    @media (max-width: 719px) {
+                        font-size: var(--fs-xl);
+                        line-height: 24px;
+                    }
+                }
+    
+                .item__text {
+                    font-family: var(--family);
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+}

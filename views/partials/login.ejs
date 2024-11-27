@@ -1,0 +1,41 @@
+<section class="section section-login">
+    <div class="modal" id="modal-login" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+            <div class="modal__container" role="dialog" aria-modal="true">
+                <div class="modal__wrapper">
+
+                    <header class="modal__header">
+                        <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+                    </header>
+
+                    <main class="modal__content">
+                        <div class="form-wrapper">
+                            <h2 class="section__title">
+                                Увійдіть в систему
+                            </h2>
+                        </div>
+                        <form id="login-form" class="form" aria-label="Contact form" method="post" action="">
+                            <div class="alert hidden">Заповніть пусті поля</div>
+                            <div class="form__element">
+                                <label>Нікнейм</label>
+                                <br>
+                                <input type="text" placeholder="Нікнейм" name="username">
+                            </div>
+                            <div class="form__element">
+                                <label>Пароль</label>
+                                <br>
+                                <input type="password" placeholder="Пароль" name="password">
+                            </div>
+                            <div class="form__element section__actions">
+                                <div class="section__actions">
+                                    <a href="" class="button">Увійти</a>
+                                </div>
+                            </div>
+                        </form>
+                    </main>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

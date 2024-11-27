@@ -8,6 +8,9 @@ const indexRouter = require("./routes/index");
 const resultRouter = require("./routes/result");
 const corelationapiRouter = require("./routes/corelation_api");
 const viewRouter = require("./routes/view");
+const corelationRouter = require("./routes/corelation");
+const normalizationRouter = require("./routes/normalization");
+const testRouter = require("./routes/test");
 
 const app = express();
 app.set('view engine', 'ejs');
@@ -25,6 +28,9 @@ app.use("/", indexRouter);
 app.use("/result", resultRouter);
 app.use("/api_corelation", corelationapiRouter);
 app.use("/view", viewRouter);
+app.use("/corelation", corelationRouter);
+app.use("/normalization", normalizationRouter);
+app.use("/test", testRouter);
 
 // Error handling
 app.use((req, res, next) => {

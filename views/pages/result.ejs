@@ -5,9 +5,10 @@
     <%- include('../partials/head_result'); %>
   </head>
   <body>
-    <%- include('../partials/header'); %>
+
     <div class="wrapper">
-      <main>
+      <%- include('../partials/header'); %>
+      <main class="main">
         <%- include('../partials/result', {getParams}); %>
       </main>
       <%- include('../partials/footer'); %>

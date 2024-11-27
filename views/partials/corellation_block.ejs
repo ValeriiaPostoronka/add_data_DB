@@ -1,7 +1,34 @@
-<h1>
-  Блок кореляції
-</h1>
-
-<div class="section__actions">
-    <a href="#open-modal-corelation" class="button">Почати кореляцію</a>
+<div id="corellation_block" class="section section-corellation_block">
+  <div class="container">
+    <div class="section__inner">
+      <h2>
+        Кореляційний аналіз даних
+      </h2>
+      <div class="slideshow">
+        <div class="image i_1"><%- include('../../screenshots/pvgis-station_Irradiance-speed.svg') %></div>
+        <p class="p_1">Зміна сонячної опроміненості. PVGIS та дослідна станція</p>
+        <div class="image i_2"><%- include('../../screenshots/pvgis-station_Irradiance.svg') %></div>
+        <p class="p_2">Сонячна опроміненість. PVGIS та дослідна станція</p>
+        <div class="image i_3"><%- include('../../screenshots/pvgis-station_Power-speed.svg') %></div>
+        <p class="p_3">Зміна потужності. PVGIS та дослідна станція</p>
+        <div class="image i_4"><%- include('../../screenshots/pvgis-station_Power.svg') %></div>
+        <p class="p_4">Потужність. PVGIS та дослідна станція</p>
+        <div class="image i_5"><%- include('../../screenshots/pvgis_Temperature-Irradiance-speed.svg') %></div>
+        <p class="p_5">Зміна опроміненості та температури. Дані з PVGIS</p>
+        <div class="image i_6"><%- include('../../screenshots/station_Irradiance-Humidity.svg') %></div>
+        <p class="p_6">Опроміненісь та вологість. Дані з дослідної станції</p>
+    </div>
+    <div class="section__subtitle">
+      <p>
+        Кореляційний аналіз за Пірсоном – це статистичний метод для кількісного оцінювання сили та напрямку лінійного зв’язку між двома змінними. 
+        Показник, що обчислюється у цьому аналізі, називається коефіцієнтом кореляції Пірсона (r), який варіюється від -1 до 1. 
+        Значення r близьке до 1 свідчить про сильний позитивний зв’язок, близьке до -1 – про сильний негативний зв’язок, а значення, наближене до 0, вказує на відсутність лінійної залежності між змінними. 
+        Кореляційний аналіз за Пірсоном передбачає, що змінні мають нормальний розподіл та перебувають у лінійному зв’язку, що робить його ефективним для аналізу парних числових даних.
+      </p>
+    </div>
+    <div class="section__actions">
+      <a href="#open-modal-corelation" class="button">Почати кореляцію</a>
+    </div>
+    </div>
+  </div>
 </div>

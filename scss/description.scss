@@ -1,0 +1,52 @@
+.section.section-hero_first {
+    margin-top: var(--sp-section);
+    margin-bottom: var(--sp-section);
+
+    .container {
+        max-width: var(--container);
+        padding: 0 var(--sp-xl) 0 var(--sp-xl);
+        margin: auto;
+
+        .section__inner {
+
+            .section__title {
+                font-size: calc(2.5 * var(--fs-xl));
+            }
+
+            .main-image {
+                margin: auto;
+                max-width: var(--wrapper);
+
+                img {
+                    height: auto;
+                    max-width: 60%;
+                    border-radius: var(--br-xl);
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+
+            .log-in {
+                text-align: center;
+                margin: var(--sp-m) 0;
+                font-size: var(--fs-l);
+                font-weight: 400;
+                font-family: var(--family);
+                color: var(--c-05);
+            }
+
+            .button_wrap {
+                display: flex;
+                justify-content: center;
+
+                .section__actions {
+                    margin-bottom: unset;
+
+                    &:nth-child(1) {
+                        margin-right: var(--sp-l);
+                    }
+                }
+            }
+        }
+    }
+}

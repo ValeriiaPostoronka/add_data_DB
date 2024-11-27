@@ -1,0 +1,21 @@
+h2 {
+    font-family: var(--family);
+    font-size: calc(2 * var(--fs-xl));
+    font-weight: 700;
+    line-height: 45px;
+    text-align: center;
+    color: var(--c-05);
+
+    @media (max-width: 992px) {
+        line-height: 35px;
+    }
+
+    @media (max-width: 576px) {
+        font-size: 30px;
+    }
+}
+
+.section__title {
+    max-width: var(--wrapper);
+    margin: 0 auto var(--sp-l) auto;
+}

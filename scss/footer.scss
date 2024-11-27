@@ -1,0 +1,23 @@
+.footer {
+    background-color: var(--c-04);
+}
+
+.footer {
+    z-index: 10;
+    display: grid;
+    grid-area: footer;
+    padding: var(--sp-l);
+    grid-template: 1fr / 1fr minmax(auto, 300px) minmax(auto, 1100px) 1fr;
+    align-items: center;
+    text-align: center;
+    
+    &__copy {
+        font-family: var(--family);
+        grid-column: 2 / 3;
+    }
+    
+    &__text {
+        font-family: var(--family);
+        grid-column: 3 / 4;
+    }
+}

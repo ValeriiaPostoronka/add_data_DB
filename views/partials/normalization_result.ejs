@@ -1,23 +1,37 @@
-<div>
-  <%- result.plot %>
-</div>
-<div>
-  <%- result.plotCheck %>
-</div>
-<div>
-  Пояснення до першої картинки
-  <ul>
-    <li>Вісь абсцис - часовий проміжок</li>
-    <li>Вісь оридинат - нормовані дані</li>
-  </ul>
-</div>
-<div>
-  Пояснення до другої картинки
-  <ul>
-    <li>Вісь абсцис - оригінальні дані</li>
-    <li>Вісь оридинат - нормовані дані</li>
-  </ul>
-</div>
-<div>
-  Досліджувана величина - <%= getParams.table %>/<%= getParams.column %>
+<div class="section section-normalization_result">
+  <div class="container">
+    <div class="section__inner">
+      <div>
+        <%- result.plot %>
+      </div>
+      <div class="section__subtitle">
+        <p class="p__bold">
+          Пояснення до першої картинки:
+        </p>
+        <p>
+          Вісь абсцис - часовий проміжок
+        </p>
+        <p>
+          Вісь оридинат - нормовані дані
+        </p>
+      </div>
+      <div class="square">
+        <%- result.plotCheck %>
+      </div>
+      <div class="section__subtitle">
+        <p class="p__bold">
+          Пояснення до другої картинки:
+        </p>
+        <p>
+          Вісь абсцис - оригінальні дані
+        </p>
+        <p>
+          Вісь оридинат - нормовані дані
+        </p>
+      </div>
+      <h2>
+        Досліджувана величина - <%= getParams.table %>/<%= getParams.column %>
+      </h2>
+    </div>
+  </div>
 </div>

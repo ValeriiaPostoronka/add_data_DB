@@ -1,0 +1,21 @@
+.section.section-test_result {
+    margin-top: var(--sp-section);
+    margin-bottom: var(--sp-section);
+
+    .container {
+        max-width: var(--container);
+        padding: 0 var(--sp-xl) 0 var(--sp-xl);
+        margin: auto;
+
+        .p__bold {
+            font-weight: bold;
+        }
+
+        .square {
+            svg {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    }
+}

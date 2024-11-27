@@ -2,48 +2,51 @@
   <div class="modal__overlay" tabindex="-1" data-micromodal-close>
     <div class="modal__container" role="dialog" aria-modal="true">
       <div class="modal__wrapper">
-        <header class="modal__header">
-          <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
-        </header>
-        <form id="normalization-form" class="form" aria-label="Contact form" method="get" action="/result">
-          <input type="hidden" name="formId" value="normalization">
-          <div class="form__element">
-            <label>Джерело даних</label>
-            <br>
-            <select name="table">
-              <option value="pvgis_api">pvgis_api</option>
-              <option value="station_data">station_data</option>
-            </select>
-          </div>
-          <div class="form__element">
-            <label>Стовпчик</label>
-            <br>
-            <select name="column">
-              <option value="Irradiance">Irradiance</option>
-              <option value="Power">Power</option>
-              <option value="Temperature">Temperature</option>
-              <option value="Humidity">Humidity</option>
-              <option value="Pressure">Pressure</option>
-            </select>
-          </div>
-          <div class="form__element">
-            <label>Дата дня №1</label>
-            <br>
-            <input type="date" placeholder="Дата дня №1" name="startDate" value="2020-11-23" min="2020-01-01" max="2021-12-31">
-          </div>
-          <div class="form__element">
-            <label>Дата дня №2</label>
-            <br>
-            <input type="date" placeholder="Дата дня №2" name="endDate" value="2020-11-23" min="2020-01-01" max="2021-12-31">
-          </div>
-          <div class="form__element section__actions">
-            <div class="section__actions">
-              <a href="#submit-modal-normalization" class="button">Розпочати нормалізацію</a>
+        <main class="modal__content">
+          <header class="modal__header">
+            <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+          </header>
+          <form id="normalization-form" class="form" aria-label="Contact form" method="get" action="/result">
+            <input type="hidden" name="formId" value="normalization">
+            <div class="form__element">
+              <label>Джерело даних</label>
+              <br>
+              <select name="table">
+                <option value="pvgis_api">pvgis_api</option>
+                <option value="station_data">station_data</option>
+              </select>
             </div>
-          </div>
-        </form>
+            <div class="form__element">
+              <label>Стовпчик</label>
+              <br>
+              <select name="column">
+                <option value="Irradiance">Irradiance</option>
+                <option value="Power">Power</option>
+                <option value="Temperature">Temperature</option>
+                <option value="Humidity">Humidity</option>
+                <option value="Pressure">Pressure</option>
+              </select>
+            </div>
+            <div class="form__element">
+              <label>Дата дня №1</label>
+              <br>
+              <input type="date" placeholder="Дата дня №1" name="startDate" value="2020-11-23" min="2020-01-01"
+                max="2021-12-31">
+            </div>
+            <div class="form__element">
+              <label>Дата дня №2</label>
+              <br>
+              <input type="date" placeholder="Дата дня №2" name="endDate" value="2020-11-24" min="2020-01-01"
+                max="2021-12-31">
+            </div>
+            <div class="form__element section__actions">
+              <div class="section__actions">
+                <a href="#submit-modal-normalization" class="button">Розпочати нормалізацію</a>
+              </div>
+            </div>
+          </form>
+        </main>
       </div>
     </div>
   </div>
 </div>
-

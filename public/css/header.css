@@ -7,13 +7,13 @@
   display: grid;
   grid-area: header;
   padding: var(--sp-l);
-  grid-template: 1fr/1fr minmax(auto, 300px) minmax(auto, 1100px) 1fr;
+  grid-template: 1fr/1fr minmax(auto, 300px) minmax(auto, 1100px);
   align-items: center;
   background-color: var(--c-04);
 }
 @media (max-width: 769px) {
   .header {
-    grid-template: 1fr/1fr minmax(auto, 50px) minmax(auto, 1100px) 1fr;
+    grid-template: 1fr/1fr minmax(auto, 50px) minmax(auto, 1100px);
   }
 }
 .header__task {

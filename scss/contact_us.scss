@@ -1,0 +1,39 @@
+.section.section-contact_us {
+    margin-top: var(--sp-section);
+    margin-bottom: var(--sp-section);
+
+    .container {
+        max-width: var(--container);
+        padding: 0 var(--sp-xl) 0 var(--sp-xl);
+        margin: auto;
+
+        .section__inner {
+            
+            .contact {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: min-content;
+                text-align: center;
+                font-family: var(--family);
+                margin: auto;
+                padding: var(--sp-xxl);
+                background-color: var(--c-02);
+                border-radius: var(--br-l);
+        
+                &__before {
+                    font-weight: 500;
+                    font-size: var(--fs-l);
+                    line-height: 20px;
+                }
+        
+                &__information {
+                    font-weight: 700;
+                    font-size: var(--fs-xl);
+                    line-height: 46px;
+                    color: var(--c-01);
+                }
+            }
+        }
+    }
+}

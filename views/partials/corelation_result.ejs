@@ -1,32 +1,51 @@
-<div>
-  Коефіцієнт кореляції Пірсона звичайних нормованих даних:<%= result.pearsonCoef %>
-</div>
-<div>
-  Коефіцієнт кореляції Пірсона швидкості зміни даних:<%= result.speedPearsonCoef %>
-</div>
-<div>
-  <%- result.plot %>
-</div>
-<div>
-  <%- result.speedPlot %>
-</div>
-<div>
-  Пояснення до першої картинки
-  <ul>
-    <li>Вісь абсцис - часовий проміжок</li>
-    <li>Вісь оридинат - нормовані дані</li>
-  </ul>
-</div>
-<div>
-  Пояснення до другої картинки
-  <ul>
-    <li>Вісь абсцис - часовий проміжок</li>
-    <li>Вісь оридинат - нормовані дані</li>
-  </ul>
-</div>
-<div>
-  Синій графік - <%= getParams.baseTable %>/<%= getParams.baseColumn %>
-</div>
-<div>
-  Помаранчевий графік - <%= getParams.corelationTable %>/<%= getParams.corelationColumn %>
+<div class="section section-corelation_result">
+  <div class="container">
+    <div class="section__inner">
+      <div class="section__subtitle">
+        <p>
+          Коефіцієнт кореляції Пірсона звичайних нормованих даних:<%= result.pearsonCoef %>
+        </p>
+        <p>
+          Коефіцієнт кореляції Пірсона швидкості зміни даних:<%= result.speedPearsonCoef %>
+        </p>
+      </div>
+      <div>
+        <%- result.plot %>
+      </div>
+      <div class="section__subtitle">
+        <p class="p__bold">
+          Пояснення до першої картинки (кореляція нормованих значень):
+        </p>
+        <p>
+          Вісь абсцис - часовий проміжок
+        </p>
+        <p>
+          Вісь оридинат - нормовані дані
+        </p>
+      </div>
+      <div>
+        <%- result.speedPlot %>
+      </div>
+      <div class="section__subtitle">
+        <p class="p__bold">
+          Пояснення до другої картинки (кореляція зміни нормованих значень):
+        </p>
+        <p>
+          Вісь абсцис - часовий проміжок
+        </p>
+        <p>
+          Вісь оридинат - зміна нормованих даних
+        </p>
+        <p class="p__bold">
+          Пояснення до позначень графіку нормованих величин двох параметрів:
+        </p>
+        <p>
+          Синій графік - <%= getParams.baseTable %>/<%= getParams.baseColumn %>
+        </p>
+        <p>
+          Помаранчевий графік - <%= getParams.corelationTable %>/<%= getParams.corelationColumn %>
+        </p>
+      </div>
+    </div>
+  </div>
 </div>

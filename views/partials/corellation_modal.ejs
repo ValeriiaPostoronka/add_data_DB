@@ -6,63 +6,68 @@
         <header class="modal__header">
           <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
         </header>
-
-        <form id="corelation-form" class="form" aria-label="Corelation form" method="get" action="/result?formId=corelation">
-          <input type="hidden" name="formId" value="corelation">
-          <div class="form__element">
-            <label>Джерело даних №1</label>
-            <br>
-             <select name="baseTable">
-              <option value="pvgis_api">pvgis_api</option>
-              <option value="station_data">station_data</option>
-            </select>
-          </div>
-          <div class="form__element">
-            <label>Стовпчик №1</label>
-            <br>
-            <select name="baseColumn">
-              <option value="Irradiance">Irradiance</option>
-              <option value="Power">Power</option>
-              <option value="Temperature">Temperature</option>
-              <option value="Humidity">Humidity</option>
-              <option value="Pressure">Pressure</option>
-            </select>
-          </div>
-          <div class="form__element">
-            <label>Джерело даних №2</label>
-            <br>
-            <select name="corelationTable">
-              <option value="pvgis_api">pvgis_api</option>
-              <option value="station_data">station_data</option>
-            </select>
-          </div>
-          <div class="form__element">
-            <label>Стовпчик №2</label>
-            <br>
-            <select name="corelationColumn">
-              <option value="Irradiance">Irradiance</option>
-              <option value="Power">Power</option>
-              <option value="Temperature">Temperature</option>
-              <option value="Humidity">Humidity</option>
-              <option value="Pressure">Pressure</option>
-            </select>
-          </div>
-          <div class="form__element">
-            <label>Дата дня №1</label>
-            <br>
-            <input type="date" placeholder="Дата дня №1" name="startDate" value="2020-11-23" min="2020-01-01" max="2021-12-31">
-          </div>
-          <div class="form__element">
-            <label>Дата дня №2</label>
-            <br>
-            <input type="date" placeholder="Дата дня №2" name="endDate" value="2020-11-23" min="2020-01-01" max="2021-12-31">
-          </div>
-          <div class="form__element section__actions">
-            <div class="section__actions">
-              <a href="#submit-modal-corelation" class="button">Розпочати кореляцію</a>
+        <main class="modal__content">
+          <form id="corelation-form" class="form" aria-label="Corelation form" method="get"
+            action="/result?formId=corelation">
+            <input type="hidden" name="formId" value="corelation">
+            <div class="form__element">
+              <label>Джерело даних №1</label>
+              <br>
+              <select name="baseTable">
+                <option value="pvgis_api">pvgis_api</option>
+                <option value="station_data">station_data</option>
+              </select>
             </div>
-          </div>
-        </form>
+            <div class="form__element">
+              <label>Стовпчик №1</label>
+              <br>
+              <select name="baseColumn">
+                <option value="Irradiance">Irradiance</option>
+                <option value="Power">Power</option>
+                <option value="Temperature">Temperature</option>
+                <option value="Humidity">Humidity</option>
+                <option value="Pressure">Pressure</option>
+              </select>
+            </div>
+            <div class="form__element">
+              <label>Джерело даних №2</label>
+              <br>
+              <select name="corelationTable">
+                <option value="pvgis_api">pvgis_api</option>
+                <option value="station_data">station_data</option>
+              </select>
+            </div>
+            <div class="form__element">
+              <label>Стовпчик №2</label>
+              <br>
+              <select name="corelationColumn">
+                <option value="Irradiance">Irradiance</option>
+                <option value="Power">Power</option>
+                <option value="Temperature">Temperature</option>
+                <option value="Humidity">Humidity</option>
+                <option value="Pressure">Pressure</option>
+              </select>
+            </div>
+            <div class="form__element">
+              <label>Дата дня №1</label>
+              <br>
+              <input type="date" placeholder="Дата дня №1" name="startDate" value="2020-11-23" min="2020-01-01"
+                max="2021-12-31">
+            </div>
+            <div class="form__element">
+              <label>Дата дня №2</label>
+              <br>
+              <input type="date" placeholder="Дата дня №2" name="endDate" value="2020-11-24" min="2020-01-01"
+                max="2021-12-31">
+            </div>
+            <div class="form__element section__actions">
+              <div class="section__actions">
+                <a href="#submit-modal-corelation" class="button">Розпочати кореляцію</a>
+              </div>
+            </div>
+          </form>
+        </main>
+
 
       </div>
     </div>

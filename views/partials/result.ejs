@@ -1,10 +1,12 @@
-<h1>
-  Блок результату
-</h1>
-<% if (getParams.formId === "test") { %>
-<%- include('../partials/test_result', {getParams, result }); %>
-<% } else if (getParams.formId === "normalization") { %>
-<%- include('../partials/normalization_result', {getParams, result }); %>
-<% } else if (getParams.formId === "corelation") { %>
-<%- include('../partials/corelation_result', {getParams, result }); %>
-<% } %>
+<div>
+  <h2>
+    Відображення результату
+  </h2>
+  <% if (getParams.formId==="test" ) { %>
+    <%- include('../partials/test_result', {getParams, result }); %>
+      <% } else if (getParams.formId==="normalization" ) { %>
+        <%- include('../partials/normalization_result', {getParams, result }); %>
+          <% } else if (getParams.formId==="corelation" ) { %>
+            <%- include('../partials/corelation_result', {getParams, result }); %>
+              <% } %>
+</div>

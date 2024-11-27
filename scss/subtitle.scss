@@ -1,0 +1,13 @@
+.section__subtitle {
+    max-width: var(--wrapper);
+    margin: 0 auto var(--sp-xl) auto;
+
+    p {
+        font-family: var(--family);
+        margin: unset;
+        text-align: center;
+        font-size: var(--fs-m);
+        font-weight: 400;
+        line-height: 24px;
+    }
+}

@@ -1,0 +1,145 @@
+.section.section-corellation_block {
+    margin-top: var(--sp-section);
+    margin-bottom: var(--sp-section);
+
+    .container {
+      max-width: var(--container);
+      padding: 0 var(--sp-xl);
+      margin: auto;
+
+      .section__inner {
+        position: relative;
+
+        @keyframes slideshow {
+          from {
+            opacity: 0;
+            filter: grayscale(100%);
+          }
+
+          5% {
+            opacity: 1;
+            filter: grayscale(50%);
+          }
+
+          10% {
+            opacity: 1;
+            filter: grayscale(0);
+            transform: scale(1.1);
+          }
+
+          15% {
+            opacity: 1;
+            filter: blur(0);
+          }
+
+          20% {
+            opacity: 0;
+            filter: blur(2px);
+            transform: scale(0.9);
+          }
+
+          25% {
+            opacity: 0;
+          }
+        }
+
+        @keyframes title {
+          from {
+            opacity: 0;
+          }
+
+          5% {
+            opacity: 1;
+          }
+
+          20% {
+            opacity: 1;
+          }
+
+          25% {
+            opacity: 0;
+          }
+        }
+
+        .slideshow {
+          position: relative;
+          width: 100%;
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .image {
+            position: absolute;
+            max-width: 90vw;
+            max-height: 80vh;
+            opacity: 0;
+            animation: slideshow 36s ease-in-out infinite;
+          }
+
+          .i_1 {
+            animation-delay: 6s;
+          }
+
+          .i_2 {
+            animation-delay: 12s;
+          }
+
+          .i_3 {
+            animation-delay: 18s;
+          }
+
+          .i_4 {
+            animation-delay: 24s;
+          }
+
+          .i_5 {
+            animation-delay: 30s;
+          }
+
+          .i_6 {
+            animation-delay: 36s;
+          }
+
+          p {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #e4e4e4;
+            text-shadow: 0 0 1px #000;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 2em;
+            opacity: 0;
+            animation: title 36s linear infinite;
+          }
+
+          .p_1 {
+            animation-delay: 7s;
+          }
+
+          .p_2 {
+            animation-delay: 13s;
+          }
+
+          .p_3 {
+            animation-delay: 19s;
+          }
+
+          .p_4 {
+            animation-delay: 25s;
+          }
+
+          .p_5 {
+            animation-delay: 31s;
+          }
+
+          .p_6 {
+            animation-delay: 37s;
+          }
+        }
+      }
+    }
+  }

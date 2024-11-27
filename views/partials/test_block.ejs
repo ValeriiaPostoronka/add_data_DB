@@ -1,8 +1,28 @@
-<h1>
-  Тест нормальності розподілу
-</h1>
-
-<div class="section__actions">
-    <a href="#open-modal-test" class="button">Почати тест</a>
+<div id="test_block" class="section section-test_block">
+  <div class="container">
+    <div class="section__inner">
+      <h2>
+        Тест нормальності розподілу
+      </h2>
+      <div class="section__subtitle">
+        <p>
+          Перевірка вибірки даних на нормальність розподілу є важливим етапом статистичного аналізу, оскільки від цього залежить вибір подальших методів обробки та аналізу даних. 
+          Нормальність розподілу визначає, чи відповідають дані гауссовому розподілу, який є основою для багатьох статистичних методів. Параметричні тести вимагають, щоб дані мали нормальний розподіл для коректної роботи. 
+        </p>
+        <h2>
+          Приклад нормального розподілу
+        </h2>
+        <svg align="center" width="700" height="400"><g transform="translate(0, 360)" fill="none" font-size="10" font-family="sans-serif" text-anchor="middle"><path class="domain" stroke="currentColor" d="M50,6V0H670V6"></path><g class="tick" opacity="1" transform="translate(50,0)"><line stroke="currentColor" y2="6"></line><text fill="currentColor" y="9" dy="0.71em">−4</text></g><g class="tick" opacity="1" transform="translate(127.5,0)"><line stroke="currentColor" y2="6"></line><text fill="currentColor" y="9" dy="0.71em">−3</text></g><g class="tick" opacity="1" transform="translate(205,0)"><line stroke="currentColor" y2="6"></line><text fill="currentColor" y="9" dy="0.71em">−2</text></g><g class="tick" opacity="1" transform="translate(282.5,0)"><line stroke="currentColor" y2="6"></line><text fill="currentColor" y="9" dy="0.71em">−1</text></g><g class="tick" opacity="1" transform="translate(360,0)"><line stroke="currentColor" y2="6"></line><text fill="currentColor" y="9" dy="0.71em">0</text></g><g class="tick" opacity="1" transform="translate(437.5,0)"><line stroke="currentColor" y2="6"></line><text fill="currentColor" y="9" dy="0.71em">1</text></g><g class="tick" opacity="1" transform="translate(515,0)"><line stroke="currentColor" y2="6"></line><text fill="currentColor" y="9" dy="0.71em">2</text></g><g class="tick" opacity="1" transform="translate(592.5,0)"><line stroke="currentColor" y2="6"></line><text fill="currentColor" y="9" dy="0.71em">3</text></g><g class="tick" opacity="1" transform="translate(670,0)"><line stroke="currentColor" y2="6"></line><text fill="currentColor" y="9" dy="0.71em">4</text></g></g><g transform="translate(50, 0)" fill="none" font-size="10" font-family="sans-serif" text-anchor="end"><path class="domain" stroke="currentColor" d="M-6,360H0V20H-6"></path><g class="tick" opacity="1" transform="translate(0,360)"><line stroke="currentColor" x2="-6"></line><text fill="currentColor" x="-9" dy="0.32em">0.00</text></g><g class="tick" opacity="1" transform="translate(0,317.387319331273)"><line stroke="currentColor" x2="-6"></line><text fill="currentColor" x="-9" dy="0.32em">0.05</text></g><g class="tick" opacity="1" transform="translate(0,274.774638662546)"><line stroke="currentColor" x2="-6"></line><text fill="currentColor" x="-9" dy="0.32em">0.10</text></g><g class="tick" opacity="1" transform="translate(0,232.16195799381902)"><line stroke="currentColor" x2="-6"></line><text fill="currentColor" x="-9" dy="0.32em">0.15</text></g><g class="tick" opacity="1" transform="translate(0,189.54927732509196)"><line stroke="currentColor" x2="-6"></line><text fill="currentColor" x="-9" dy="0.32em">0.20</text></g><g class="tick" opacity="1" transform="translate(0,146.93659665636497)"><line stroke="currentColor" x2="-6"></line><text fill="currentColor" x="-9" dy="0.32em">0.25</text></g><g class="tick" opacity="1" transform="translate(0,104.32391598763799)"><line stroke="currentColor" x2="-6"></line><text fill="currentColor" x="-9" dy="0.32em">0.30</text></g><g class="tick" opacity="1" transform="translate(0,61.71123531891099)"><line stroke="currentColor" x2="-6"></line><text fill="currentColor" x="-9" dy="0.32em">0.35</text></g></g><path fill="none" stroke="steelblue" stroke-width="2" d="M50,359.886L57.75,359.831L65.5,359.751L73.25,359.638L81,359.479L88.75,359.256L96.5,358.95L104.25,358.532L112,357.968L119.75,357.216L127.5,356.223L135.25,354.927L143,353.254L150.75,351.119L158.5,348.424L166.25,345.061L174,340.914L181.75,335.858L189.5,329.767L197.25,322.515L205,313.986L212.75,304.079L220.5,292.714L228.25,279.846L236,265.467L243.75,249.618L251.5,232.394L259.25,213.95L267,194.504L274.75,174.335L282.5,153.78L290.25,133.228L298,113.109L305.75,93.88L313.5,76.008L321.25,59.951L329,46.14L336.75,34.961L344.5,26.732L352.25,21.696L360,20L367.75,21.696L375.5,26.732L383.25,34.961L391,46.14L398.75,59.951L406.5,76.008L414.25,93.88L422,113.109L429.75,133.228L437.5,153.78L445.25,174.335L453,194.504L460.75,213.95L468.5,232.394L476.25,249.618L484,265.467L491.75,279.846L499.5,292.714L507.25,304.079L515,313.986L522.75,322.515L530.5,329.767L538.25,335.858L546,340.914L553.75,345.061L561.5,348.424L569.25,351.119L577,353.254L584.75,354.927L592.5,356.223L600.25,357.216L608,357.968L615.75,358.532L623.5,358.95L631.25,359.256L639,359.479L646.75,359.638L654.5,359.751L662.25,359.831L670,359.886"></path></svg>
+        <p>
+          Якщо розподіл відхиляється від нормального, це може призвести до помилкових висновків або заниження точності прогнозів.
+          Якщо ж дані не відповідають нормальному розподілу, слід використовувати альтернативні методи, непараметричні  або трансформації даних.
+          Таким чином, перевірка нормальності є необхідною для обґрунтованого вибору математичних інструментів і забезпечення достовірності результатів аналізу.
+        </p>
+      </div>
+      <div class="section__actions">
+          <a href="#open-modal-test" class="button">Почати тест</a>
+      </div>
+    </div>
+  </div>
 </div>
 

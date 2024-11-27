@@ -7,17 +7,17 @@
   <body>
     <%- include('../partials/test_modal'); %>
     <%- include('../partials/normalization_modal'); %>
-    <%- include('../partials/corellation_modal'); %>
+    <%- include('../partials/login'); %>
     <%- include('../partials/registration'); %>
-    <%- include('../partials/header'); %>
     <div class="wrapper">
-      <main>
+      <%- include('../partials/header'); %>
+      <main class="main">
         <%- include('../partials/description'); %>
-        <%- include('../partials/test_block'); %>
-        <%- include('../partials/normalization_block'); %>
-        <%- include('../partials/corellation_block'); %>
+        <%- include('../partials/cards'); %>
+        <%- include('../partials/contact_us.ejs'); %>
       </main>
       <%- include('../partials/footer'); %>
+    </div>
       <script src="/assets/js/modals.js"></script>
   </body>
 </html>

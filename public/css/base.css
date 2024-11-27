@@ -45,13 +45,11 @@
   /* Colors */
   --c-white: #FFF;
   --c-black: #000;
-  --c-green: #7DA38C;
-  --c-red: #B51D46;
-  --c-01: #444152;
-  --c-02: #8e8aa5;
-  --c-03: #e4e4e6;
-  --c-04: #cbcad0;
-  --c-05: #241e3e;
+  --c-01: #223440;
+  --c-02: #5D7A8C;
+  --c-03: #F2F2F2;
+  --c-04: #BACBD9;
+  --c-05: #1D1340;
 }
 
 /*# sourceMappingURL=base.css.map */

@@ -1,0 +1,19 @@
+.section.section-test_block {
+    margin-top: var(--sp-section);
+    margin-bottom: var(--sp-section);
+
+    svg {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .container {
+        max-width: var(--container);
+        padding: 0 var(--sp-xl) 0 var(--sp-xl);
+        margin: auto;
+
+        .section__inner {
+            
+        }
+    }
+}

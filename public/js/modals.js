@@ -70,6 +70,17 @@ registrationButton.forEach((element) => {
     }
 });
 
+const loginButton = [...document.querySelectorAll("a[href='#open-modal-log']")];
+
+loginButton.forEach((element) => {
+    if (element !== null) {
+        element.addEventListener('click', () => {
+            MicroModal.show('modal-login');
+            MicroModal.init();
+        });
+    }
+});
+
 ///
 
 // test select

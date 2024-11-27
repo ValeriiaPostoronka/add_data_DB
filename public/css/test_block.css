@@ -1,3 +1,15 @@
-
+.section.section-test_block {
+  margin-top: var(--sp-section);
+  margin-bottom: var(--sp-section);
+}
+.section.section-test_block svg {
+  display: block;
+  margin: 0 auto;
+}
+.section.section-test_block .container {
+  max-width: var(--container);
+  padding: 0 var(--sp-xl) 0 var(--sp-xl);
+  margin: auto;
+}
 
 /*# sourceMappingURL=test_block.css.map */
